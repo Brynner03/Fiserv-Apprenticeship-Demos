@@ -30,43 +30,6 @@ console.log(sumArray2([10, -2, 3]));     // Returns 11
 console.log(sumArray2([]));               // Returns 0
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Write a recursive function reverseString that takes a string and returns the string reversed.
 
 
