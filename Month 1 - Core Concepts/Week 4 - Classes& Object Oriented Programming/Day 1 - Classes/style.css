@@ -1,0 +1,39 @@
+ul, ol {
+    display: flex;
+  }
+  
+  ul {
+    flex-direction: column;
+    height: 40vh;
+    justify-content: flex-end;
+  }
+  
+  ol {
+    flex-direction: row;
+    height: 40vh;
+    align-items: last baseline;
+  }
+  
+  
+  ol li {
+    font-size: 20px;
+    background-color: green;
+  }
+  
+  img {
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  
+  .mid-li {
+    background-color: yellow;
+    padding-left: 10px;
+    padding-top: 20px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #hobbies {
+    color: blue;
+    font-size: 10px;
+  }
