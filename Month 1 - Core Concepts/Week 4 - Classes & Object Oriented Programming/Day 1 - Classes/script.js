@@ -1,36 +1,36 @@
-// Classes
+// Define the Product class to represent a product with a name and price
 class Product {
-    // Helps us assign a property to our class
+    // Constructor to initialize Product properties: name and price
     constructor(name, price) {
         this.name = name
         this.price = price
     }
 
-    // Don't need "function" keyword to create a function
+    // Method to display the product's details (name and price)
+    // Note: No need for the "function" keyword when defining methods inside a class
     displayProduct() {
         console.log(`Product: ${this.name}`)
         console.log(`Price: ${this.price}`)
     }
 
-    // 
+    // Method to calculate the total price, including sales tax
     calculateTotal(salesTax) {
         return this.price + (this.price * salesTax)
     }
-
 }
 
-// Invoking a class
+// Create instances of the Product class with specific properties
 const product1 = new Product("Shirt", 19.99)
 const product2 = new Product("Pants", 29.99)
 
-// Invoke a function in a class
-// product1.displayProduct()
+// Call the displayProduct() method to show product1's details
 product1.displayProduct()
 
+// Calculate the total price of product1 with 5% sales tax and print it, formatted to two decimal places
 const total = product1.calculateTotal(0.05)
-console.log(`Total price (with tax) $${total.toFixed(2)}`)
+console.log(`Total price (with tax): $${total.toFixed(2)}`)
 
-// Invoking a class without passing down properties
-// results in undefined
+// Demonstrate what happens when invoking a class without passing properties
+// This will result in undefined values for name and price
 const product3 = new Product
 product3.displayProduct()
