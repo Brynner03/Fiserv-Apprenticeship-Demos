@@ -1,10 +1,7 @@
-class Person {
-    constructor(name, location){
-        this.name = name
-        this.location = location
-    }
+const Student = require('./classes/Student')
 
-    introduce() {
-        return `Hello, my name is ${this.name}, I am from ${this.location}.`
-    }
-}
+const student1 = new Student("Samantha", "Boston", "MIT")
+const student2 = new Student("Brian", "California", "Multiverse")
+
+console.log(student1.introduce())
+console.log(Student.totalStudents)
