@@ -8,7 +8,9 @@ async function main() {
   const trainers = await Trainer.findAll();
   const pokemon = await Pokemon.findAll();
   const badges = await Badge.findAll();
-  // console.log(pokemon)  // Uncomment to log all Pokémon data
+  
+  // Uncomment to log all Pokémon data
+  // console.log(pokemon)
 
   // Establish a one-to-one relationship: Assign the first Pokémon to the first trainer
   await trainers[0].addPokemon(pokemon[0]);
@@ -16,7 +18,8 @@ async function main() {
   // Establish a one-to-many relationship: Assign multiple Pokémon to the first trainer
   await trainers[0].addPokemons(pokemon[1], pokemon[2]);
 
-  // console.log(trainers)  // Uncomment to log all trainer data
+  // Uncomment to log all trainer data
+  // console.log(trainers)
 
   // Find a specific trainer by name and include their associated Pokémon in the result
   const trainerWithPokemon = await Trainer.findOne({
@@ -26,7 +29,8 @@ async function main() {
     include: Pokemon,
   });
 
-  // console.log(JSON.stringify(trainerWithPokemon, null, 2))  // Uncomment to view trainer with Pokémon data
+  // Uncomment to view trainer with Pokémon data
+  // console.log(JSON.stringify(trainerWithPokemon, null, 2))
 
   // Assign a badge to the first trainer
   await trainers[0].addBadge(badges[0]);
