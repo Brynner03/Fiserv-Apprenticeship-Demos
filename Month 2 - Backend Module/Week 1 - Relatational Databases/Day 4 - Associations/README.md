@@ -28,11 +28,14 @@ npm start
 
 ## Project Overview
 
-Seeding the Database
+### Seeding the Database
+
 The seeding process is handled by `seed.js`:
 
-Purpose: Sets up initial data by clearing existing data and repopulating tables.
-Data: The `seedData.js` file includes predefined Pokémon, trainers, and badges.
+### Purpose: Sets up initial data by clearing existing data and repopulating tables.
+
+### Data: The `seedData.js` file includes predefined Pokémon, trainers, and badges.
+
 Main Application in `main.js`
 
 The `main.js` file demonstrates database operations, including associating Pokémon with trainers and badges with multiple trainers.
