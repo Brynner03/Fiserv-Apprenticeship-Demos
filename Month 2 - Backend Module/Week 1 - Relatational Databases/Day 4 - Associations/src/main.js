@@ -10,7 +10,7 @@ async function main() {
   const badges = await Badge.findAll();
   
   // Uncomment to log all Pokémon data
-  // console.log(pokemon)
+  console.log(pokemon)
 
   // Establish a one-to-one relationship: Assign the first Pokémon to the first trainer
   await trainers[0].addPokemon(pokemon[0]);
@@ -30,7 +30,7 @@ async function main() {
   });
 
   // Uncomment to view trainer with Pokémon data
-  // console.log(JSON.stringify(trainerWithPokemon, null, 2))
+  console.log(JSON.stringify(trainerWithPokemon, null, 2))
 
   // Assign a badge to the first trainer
   await trainers[0].addBadge(badges[0]);
