@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
 
-  // Use the useState
+  // State to track whether the todo list is visible or not
   const [isTodoListVisible, setIsTodoListVisible] = useState(false)
 
 
@@ -28,14 +28,17 @@ function App() {
 
   return (
     <div className="App">
+      {/* If isTodoListVisible is false, show the button to display the todo list */}
       {!isTodoListVisible ? (
         <button onClick={() => {setIsTodoListVisible(true)}}>Show Todo List</button>
       ): (
+        // If isTodoListVisible is true, display the todo list and the hide button
         <div>
           <h1>Todo List</h1>
           <ol>
             {data.map((itemObj, index) => (
-              <ListItem 
+              <ListItem
+              // Key helps React track items in the list
               key={index}
               title={itemObj.title}
               description={itemObj.description}
@@ -43,7 +46,7 @@ function App() {
               />
             ))}
           </ol>
-          <button onClick={() => {setIsTodoListVisible(false)}} > Hide Todo List</button>
+          <button onClick={() => {setIsTodoListVisible(false)}}> Hide Todo List</button>
         </div>
       )}
     </div>
