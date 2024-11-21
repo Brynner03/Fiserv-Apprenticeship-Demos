@@ -1,1 +1,0 @@
-[{"name":"Charizard","type":"Fire"},{"name":"Bulbasaur","type":"grass"},{"name":"Pikachu","type":"Electric"},{"name":"Pikachu","type":"Electric"}]
